@@ -1,6 +1,5 @@
 package com.example.service;
 
-import com.example.config.AppConfig;
 import com.example.dto.AuthenticationResponse;
 import com.example.dto.LoginRequest;
 import com.example.dto.RefreshTokenRequest;
@@ -38,7 +37,7 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
     private final JwtProvider jwtProvider;
     private final RefreshTokenService refreshTokenService;
-    private final AppConfig appConfig;
+    
 
     public void signup(RegisterRequest registerRequest) {
         User user = new User();
@@ -54,7 +53,7 @@ public class AuthService {
         mailService.sendMail(new NotificationEmail("Please Activate your Account",
                 user.getEmail(), "Thank you for signing up to Spring Reddit, " +
                 "please click on the below url to activate your account : " +
-                appConfig.getAppUrl() + "/api/auth/accountVerification/" + token));
+                 "http://localhost:8080/api/auth/accountVerification/" + token));
     }
 
     @Transactional(readOnly = true)
