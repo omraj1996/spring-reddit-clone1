@@ -5,6 +5,7 @@ E:\Spring Boot\spring-reddit-clone\src\main\java\com\example\mapper\PostMapper.j
 E:\Spring Boot\spring-reddit-clone\src\main\java\com\example\dto\SubredditDto.java
 E:\Spring Boot\spring-reddit-clone\src\main\java\com\example\SpringRedditClone.java
 E:\Spring Boot\spring-reddit-clone\src\main\java\com\example\security\JwtProvider.java
+E:\Spring Boot\spring-reddit-clone\src\main\java\com\example\config\AppConfig.java
 E:\Spring Boot\spring-reddit-clone\src\main\java\com\example\model\VoteType.java
 E:\Spring Boot\spring-reddit-clone\src\main\java\com\example\controller\VoteController.java
 E:\Spring Boot\spring-reddit-clone\src\main\java\com\example\dto\RefreshTokenRequest.java
