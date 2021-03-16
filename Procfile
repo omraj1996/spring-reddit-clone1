@@ -1,1 +1,1 @@
-web: java -jar target/spring-reddit-clone1-0.0.1-SNAPSHOT.jar
+web: java $JAVA_OPTS -cp target/spring-reddit-clone1-0.0.1-SNAPSHOT.jar com.example.SpringRedditClone
