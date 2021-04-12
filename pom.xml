@@ -176,41 +176,27 @@
 						</annotationProcessorPaths>
 					</configuration>
 				</plugin>
-
 				<plugin>
-					<groupId>com.heroku.sdk</groupId>
-					<artifactId>heroku-maven-plugin</artifactId>
-					<version>3.0.3</version>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>2.4.3</version>
 					<configuration>
-						<jdkVersion>1.8</jdkVersion>
-						<!-- Use your own application name >>> heroku enforces lowcase names -->
-						<appName>spring-reddit-cloneom</appName>
-						<processTypes>
-							<!-- Tell Heroku how to launch your application -->
-							<web>web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/spring-reddit-clone1-0.0.1-SNAPSHOT.jar com.example.SpringRedditClone</web>
-						</processTypes>
+						<archive>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<classpathPrefix>lib/</classpathPrefix>
+								<mainClass>com.example.SpringRedditClone</mainClass>
+							</manifest>
+						</archive>
 					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
 				</plugin>
-				<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <version>3.1.1</version>
-            <executions>
-              <execution>
-                <id>copy-dependencies</id>
-                <phase>package</phase>
-                <goals>
-                  <goal>copy-dependencies</goal>
-                </goals>
-                <configuration>
-                  <outputDirectory>target/dependency/</outputDirectory>
-                  <overWriteReleases>false</overWriteReleases>
-                  <overWriteSnapshots>false</overWriteSnapshots>
-                  <overWriteIfNewer>true</overWriteIfNewer>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
