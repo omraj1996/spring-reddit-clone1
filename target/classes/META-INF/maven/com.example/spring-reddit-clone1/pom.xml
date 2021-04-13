@@ -129,7 +129,8 @@
 	</dependencies>
 
 	<build>
-		<plugins>
+		
+			<plugins>
 				<plugin>
 					<groupId>org.jetbrains.kotlin</groupId>
 					<artifactId>kotlin-maven-plugin</artifactId>
@@ -170,13 +171,14 @@
 							</path>
 						</annotationProcessorPaths>
 					</configuration>
-					
+
 				</plugin>
 				<plugin>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-maven-plugin</artifactId>
 				</plugin>
 			</plugins>
+		
 	</build>
 
 </project>
