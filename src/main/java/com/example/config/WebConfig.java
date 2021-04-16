@@ -13,7 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
 	@Override
 	public void addCorsMappings(CorsRegistry corsRegistry) {
 		corsRegistry.addMapping("/**")
-				.allowedOriginPatterns("*").allowedMethods("*").maxAge(3600L).allowedHeaders("*")
+				.allowedOriginPatterns("https://spring-reddit-cloneom.herokuapp.com").allowedMethods("*").maxAge(3600L).allowedHeaders("*")
 				.exposedHeaders("Authorization").allowCredentials(true);
 	}
 	

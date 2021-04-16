@@ -53,7 +53,7 @@ public class AuthService {
 		String token = generateVerificationToken(user);
 		mailService.sendMail(new NotificationEmail("Please Activate your Account", user.getEmail(),
 				"Thank you for signing up to Spring Reddit, "
-						+ "please click on the below url to activate your account : https://spring-reddit-cloneom.herokuapp.com/api/auth/accountVerification/"
+						+ "please click on the below url to activate your account : https://spring-reddit-cloneom.herokuapp.com//api/auth/accountVerification/"
 						+ token));
 	}
 
